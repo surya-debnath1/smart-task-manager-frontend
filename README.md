@@ -1,50 +1,110 @@
-# Welcome to your Expo app 👋
+# SmartTasks – Mobile Task Manager (Frontend)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+SmartTasks is a mobile task management application built using React Native and Expo.  
+This repository contains the **frontend** of the SmartTasks full-stack project.
 
-## Get started
+The application connects to a Node.js + Express backend API for authentication and task management.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 📱 Features
 
-2. Start the app
+- User Registration
+- User Login (JWT Authentication)
+- Protected Navigation
+- Create Task
+- View Tasks
+- Update Task Status
+- Delete Task
+- Search Tasks
+- Filter by Status (Pending, In Progress, Completed)
+- Logout
+- Secure token storage using AsyncStorage
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🛠 Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo
+- Expo Router
+- Axios
+- AsyncStorage
+- TypeScript
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 📂 Project Structure
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+frontend/
+├── app/
+│   ├── login.tsx
+│   ├── register.tsx
+│   ├── tasks.tsx
+│   ├── create-task.tsx
+│   ├── profile.tsx
+│   └── index.tsx
+│
+├── src/
+│   ├── components/
+│   ├── context/
+│   ├── services/
+│   ├── types/
+│   └── config/
+│
+├── assets/
+└── app.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🚀 Running the Frontend Locally
 
-To learn more about developing your project with Expo, look at the following resources:
+1️⃣ Install dependencies:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm install
+```
 
-## Join the community
+2️⃣ Start the application:
 
-Join our community of developers creating universal apps.
+```bash
+npx expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+3️⃣ Open the app using:
+- Expo Go (Android/iOS)
+- Android Emulator
+- iOS Simulator
+
+---
+
+## 🔗 Backend Requirement
+
+The backend server must be running for authentication and task operations to work.
+
+Make sure the base URL inside:
+
+```
+src/config/api.ts
+```
+
+points to your backend server.
+
+Example:
+
+```
+http://localhost:5000/api
+```
+
+---
+
+## 🎯 Learning Outcomes
+
+- Implemented JWT authentication flow
+- Built protected navigation using Expo Router
+- Structured scalable React Native project
+- Created reusable UI components
+- Integrated frontend with REST API backend
+- Managed global authentication state using Context API
