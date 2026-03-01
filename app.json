@@ -15,8 +15,7 @@
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#0d47a1"
       },
-      "package": "com.knight101.smarttasks",
-      "usesCleartextTraffic": true
+      "package": "com.knight101.smarttasks"
     },
     "plugins": [
       "expo-router"
